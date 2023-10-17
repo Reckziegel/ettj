@@ -14,11 +14,11 @@ factors_sv(lambda, yields, maturidades)
 \item{maturidades}{Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.}
 }
 \value{
-A matrix containing the 4 factors ad 2 decay parameters in this order.
+A matrix containing the 4 factors and 2 decay parameters, respectively.
 }
 \description{
 Determines the optimal decay parameters calling the rmse function.
-Then, performs an OLS regression using the 4 factor yield curve model in order to determine the optimal \eqn{\lambda} factors:
+Then, performs an OLS regression using the 4 factor yield curve model in order to determine the optimal \eqn{\lambda} decay parameters:
 \deqn{y_{\tau} = \beta_{1}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1})) +
                  \beta_{2}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1}) - e^{(-\tau^{'}  \lambda_{1})}) +
                  \beta_{3}((1-e^{(-\tau^{'}  \lambda_{2})})/(\tau^{'}\lambda_{2}) - e^{(-\tau^{'}  \lambda_{2})})}
