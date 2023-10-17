@@ -7,7 +7,7 @@
 factors_sv(lambda, yields, maturidades)
 }
 \arguments{
-\item{lambda}{initial guess for the decay parameters}
+\item{lambda}{Initial guess for the decay parameters.}
 
 \item{yields}{A vector of yields}
 

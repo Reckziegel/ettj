@@ -1,6 +1,6 @@
 #' Estimates the 4 factors and 2 decay parameters in the Svensson (1994) factor model. The decay parameters are optimized using the two step approach.
 #'
-#' @param lambda initial guess for the decay parameters
+#' @param lambda Initial guess for the decay parameters. 
 #' @param yields A vector of yields
 #' @param maturidades A vector of maturities. Be sure to put them in the same base as yield, i.e., per annum, per month etc.
 #'
