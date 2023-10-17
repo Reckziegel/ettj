@@ -1,17 +1,27 @@
 #' svensson (1994) 4 factor model formula
 #'
 #' @description
-#' Returns the yields associated with a set of maturities, using decay parameters and factors with the Svensson (1994) formula
+#' Returns the yields associated with a set of maturities, using decay parameters and factors with the Svensson (1994) formula.
 #'
 #'
-#' @param lambda Decay parameters
-#' @param factors The estimated factors Beta 1 through 4
-#' @param tau Time to maturity
+#' @param lambda Decay parameters. A pair of numeric values.
+#' @param factors Observed yields. Numeric Vector.
+#' @param tau Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.
 #'
-#' @return vector of yields corresponding to the maturities
+#' @return Vector of yields corresponding to the maturities.
 #' @export
+#' 
 #'
 #' @examples
+#' 
+#' library(Quandl)
+#' 
+#' dados <- Quandl("USTREASURY/YIELD")
+#' yields <- dados[1,2:ncol(dados)]
+#' maturidades <- c(1/12, 2/12, 3/12, 6/12, 1, 2, 3, 5, 7, 10, 20, 30);
+#' factors <- factors_sv(c(.9,.035), yields, maturidades)
+#' yc <- ycsv(factors[5:6], factors[1:4], maturidades)
+#' 
 ycsv <- function(lambda, factors, tau){
   lam1 = lambda[[1]]
   lam2 = lambda[[2]]

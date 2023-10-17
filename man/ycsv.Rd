@@ -7,15 +7,26 @@
 ycsv(lambda, factors, tau)
 }
 \arguments{
-\item{lambda}{Decay parameters}
+\item{lambda}{Decay parameters. A pair of numeric values.}
 
-\item{factors}{The estimated factors Beta 1 through 4}
+\item{factors}{Observed yields. Numeric Vector.}
 
-\item{tau}{Time to maturity}
+\item{tau}{Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.}
 }
 \value{
-vector of yields corresponding to the maturities
+Vector of yields corresponding to the maturities.
 }
 \description{
-Returns the yields associated with a set of maturities, using decay parameters and factors with the Svensson (1994) formula
+Returns the yields associated with a set of maturities, using decay parameters and factors with the Svensson (1994) formula.
+}
+\examples{
+
+library(Quandl)
+
+dados <- Quandl("USTREASURY/YIELD")
+yields <- dados[1,2:ncol(dados)]
+maturidades <- c(1/12, 2/12, 3/12, 6/12, 1, 2, 3, 5, 7, 10, 20, 30);
+factors <- factors_sv(c(.9,.035), yields, maturidades)
+yc <- ycsv(factors[5:6], factors[1:4], maturidades)
+
 }

@@ -18,7 +18,7 @@
 #' @return Squared root of mean squared error.
 #' @export
 #'
-#' @examples
+#' 
 #'
 rmse_sv <- function(lambda, Y, tau){
   lam1 = lambda[[1]]

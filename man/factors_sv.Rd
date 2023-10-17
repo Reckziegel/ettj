@@ -7,15 +7,30 @@
 factors_sv(lambda, yields, maturidades)
 }
 \arguments{
-\item{lambda}{Initial guess for the decay parameters.}
+\item{lambda}{Initial guess for the decay parameters. A pair of numeric values.}
 
-\item{yields}{A vector of yields}
+\item{yields}{Observed yields. Numeric Vector.}
 
-\item{maturidades}{A vector of maturities. Be sure to put them in the same base as yield, i.e., per annum, per month etc.}
+\item{maturidades}{Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.}
 }
 \value{
-A matrix containing the 4 factors ad 2 decay parameters in this order
+A matrix containing the 4 factors ad 2 decay parameters in this order.
 }
 \description{
-Estimates the 4 factors and 2 decay parameters in the Svensson (1994) factor model. The decay parameters are optimized using the two step approach.
+Determines the optimal decay parameters calling the rmse function.
+Then, performs an OLS regression using the 4 factor yield curve model in order to determine the optimal \eqn{\lambda} factors:
+\deqn{y_{\tau} = \beta_{1}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1})) +
+                 \beta_{2}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1}) - e^{(-\tau^{'}  \lambda_{1})}) +
+                 \beta_{3}((1-e^{(-\tau^{'}  \lambda_{2})})/(\tau^{'}\lambda_{2}) - e^{(-\tau^{'}  \lambda_{2})})}
+}
+\examples{
+
+library(Quandl)
+
+dados <- Quandl("USTREASURY/YIELD")
+yields <- dados[1,2:ncol(dados)]
+maturidades <- c(1/12, 2/12, 3/12, 6/12, 1, 2, 3, 5, 7, 10, 20, 30);
+factors <- factors_sv(c(.9,.035), yields, maturidades)
+yc <- ycsv(factors[5:6], factors[1:4], maturidades)
+
 }
