@@ -2,8 +2,9 @@
 #'
 #' @description
 #' Performs an OLS regression using the 3 factor yield curve model:
-#' \deqn{y_{\tau} = \beta_{1}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1})) +
-#'                  \beta_{2}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1}) - e^{(-\tau^{'}  \lambda_{1})})} 
+#' \deqn{y_{\tau} = \beta_{1} + 
+#'                  \beta_{2}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1})) +
+#'                  \beta_{3}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1}) - e^{(-\tau^{'}  \lambda_{1})})} 
 #' The independent variable is the yield to maturity, \eqn{y_{\tau}}, the dependent variables are the factor loadings,
 #' the bracketed terms that multiply the \eqn{\beta} factors. The results are compared with the empirical yields and summarized 
 #' in the rmse results. This function is called by the factors_sv function in order to determine the decay parameters, 

@@ -19,8 +19,9 @@ A matrix containing the 3 factors and decay parameter, respectively.
 \description{
 Determines the optimal decay parameters calling the rmse function.
 Then, performs an OLS regression using the 3 factor yield curve model in order to determine the optimal \eqn{\lambda} decay parameters:
-\deqn{y_{\tau} = \beta_{1}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1})) +
-                 \beta_{2}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1}) - e^{(-\tau^{'}  \lambda_{1})})}
+\deqn{y_{\tau} = \beta_{1} + 
+                 \beta_{2}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1})) +
+                 \beta_{3}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1}) - e^{(-\tau^{'}  \lambda_{1})})}
 }
 \examples{
 
