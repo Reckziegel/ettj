@@ -9,7 +9,7 @@ ycsv(lambda, factors, tau)
 \arguments{
 \item{lambda}{Decay parameters. A pair of numeric values.}
 
-\item{factors}{Observed yields. Numeric Vector.}
+\item{factors}{Estimated factors (see factors_sv). Numeric Vector.}
 
 \item{tau}{Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.}
 }
