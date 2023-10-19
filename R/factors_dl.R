@@ -7,7 +7,7 @@
 #'                  \beta_{2}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1})) +
 #'                  \beta_{3}((1-e^{(-\tau^{'}  \lambda_{1})})/(\tau^{'}\lambda_{1}) - e^{(-\tau^{'}  \lambda_{1})})}
 #'
-#' @param lambda Initial guess for the decay parameter. A numeric values.
+#' @param lambda Initial guess for the decay parameter. A numeric value.
 #' @param yields Observed yields. Numeric Vector.
 #' @param maturidades Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.
 #'

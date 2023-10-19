@@ -7,7 +7,7 @@
 factors_dl(lambda, yields, maturidades)
 }
 \arguments{
-\item{lambda}{Initial guess for the decay parameter. A numeric values.}
+\item{lambda}{Initial guess for the decay parameter. A numeric value.}
 
 \item{yields}{Observed yields. Numeric Vector.}
 

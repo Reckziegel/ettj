@@ -7,7 +7,7 @@
 ycdl(lambda, factors, tau)
 }
 \arguments{
-\item{lambda}{Decay parameters. A pair of numeric values.}
+\item{lambda}{Decay parameter.Numeric.}
 
 \item{factors}{Observed yields. Numeric Vector.}
 

@@ -7,7 +7,7 @@
 rmse_dl(lambda, Y, tau)
 }
 \arguments{
-\item{lambda}{Decay parameters. A pair of numeric values.}
+\item{lambda}{Decay parameter. A numeric value.}
 
 \item{Y}{Observed yields. Numeric Vector.}
 

@@ -3,7 +3,7 @@
 #' @description
 #' Returns the yields associated with a set of maturities, using decay parameters and factors with the Diebold and Li (2006) formula.
 #'
-#' @param lambda Decay parameters. A pair of numeric values.
+#' @param lambda Decay parameter.Numeric.
 #' @param factors Observed yields. Numeric Vector.
 #' @param tau Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.
 #'

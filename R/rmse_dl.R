@@ -10,7 +10,7 @@
 #' in the rmse results. This function is called by the factors_sv function in order to determine the decay parameters, 
 #' \eqn{\lambda}, which minimize the error of the model in relation to the observed values.
 #'
-#' @param lambda Decay parameters. A pair of numeric values.
+#' @param lambda Decay parameter. A numeric value.
 #' @param Y Observed yields. Numeric Vector.
 #' @param tau Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.
 #'
