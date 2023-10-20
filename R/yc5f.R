@@ -4,7 +4,7 @@
 #' Returns the yields associated with a set of maturities, using decay parameters and factors with the 5 factor formula.
 #'
 #'
-#' @param lambda Decay parameters, slope, curvature 1 and curvature 2.Numeric values.
+#' @param lambda Decay parameters, associated with the slope, curvature 1 and curvature 2 loadings.Numeric values.
 #' @param factors Estimated factors (see factors_5f). Numeric Vector.
 #' @param tau Time to maturity. Numeric. Must match the length of Y and be in the same base, i.e, annual, monthly etc.
 #'

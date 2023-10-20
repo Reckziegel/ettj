@@ -7,7 +7,7 @@
 yc5f(lambda, factors, tau)
 }
 \arguments{
-\item{lambda}{Decay parameters, slope, curvature 1 and curvature 2.Numeric values.}
+\item{lambda}{Decay parameters, associated with the slope, curvature 1 and curvature 2 loadings.Numeric values.}
 
 \item{factors}{Estimated factors (see factors_5f). Numeric Vector.}
 
