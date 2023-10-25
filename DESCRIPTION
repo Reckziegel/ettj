@@ -9,7 +9,7 @@ Description: Estimates yield curve factor models, Diebold and Li (2006), Svensso
              This method produces accurate representations of empirical zero-coupon yields while producing factors that can be interpreted as the level, inclination and curvature of term structe of the yield curve.
              This facotrs are time series vectors that can be further incorporated in other models. 
              Therefore, this approach is able to reduce a multi dimention problem into a few factors.
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 

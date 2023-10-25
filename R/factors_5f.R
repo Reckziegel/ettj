@@ -64,7 +64,9 @@ factors_5f <- function(lambda, yields, maturidades){
   B[,1] <- solve(t(H)%*%H, tol = 10^-500)%*%(t(H)%*%t(yields))
   
   
-  final <- rbind(B, lam1, lam2, lam3); rownames(final) <- c('Beta 1', 'Beta 2', 'Beta 3', 'Beta 4', 'Beta 5', 'lambda 1', 'lambda 2', 'lambda 3')
+  final <- rbind(B, lam1, lam2, lam3) 
+  
+  rownames(final) <- c('Beta 1', 'Beta 2', 'Beta 3', 'Beta 4', 'Beta 5', 'lambda 1', 'lambda 2', 'lambda 3')
   
   return(final)
 }

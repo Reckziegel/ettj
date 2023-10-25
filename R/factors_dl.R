@@ -58,7 +58,9 @@ factors_dl <- function(lambda, yields, maturidades){
   B[,1] <- solve(t(H)%*%H, tol = 10^-50)%*%(t(H)%*%t(yields))
   
   
-  final <- rbind(B, lam1); rownames(final) <- c('Beta 1', 'Beta 2', 'Beta 3', 'lambda 1')
+  final <- rbind(B, lam1)
+  
+  rownames(final) <- c('Beta 1', 'Beta 2', 'Beta 3', 'lambda 1')
   
   return(final)
 }
