@@ -27,7 +27,7 @@ Then, performs an OLS regression using the 5 factor yield curve model in order t
 }
 \examples{
 
-library(Quandl)
+library('Quandl')
 
 dados <- Quandl("USTREASURY/YIELD")
 yields <- dados[1,2:ncol(dados)]

@@ -18,7 +18,7 @@
 #'
 #' @examples
 #' 
-#' library(Quandl)
+#' library('Quandl')
 #' 
 #' dados <- Quandl("USTREASURY/YIELD")
 #' yields <- dados[1,2:ncol(dados)]
@@ -28,11 +28,11 @@
 #'
 factors_5f <- function(lambda, yields, maturidades){
   # Treating data -----------------------------------------------------------
-  index <- full_join(as_tibble(which(is.na(yields))), as_tibble(which(is.na(maturidades))))
+  index <- dplyr::full_join(dplyr::as_tibble(which(is.na(yields))), dplyr::as_tibble(which(is.na(maturidades))))
   
   index <- as.double(as.matrix(index))
   
-  if(is_empty(index)){
+  if(purrr::is_empty(index)){
     yields <- yields
     maturidades <- maturidades
   }else{
@@ -44,7 +44,7 @@ factors_5f <- function(lambda, yields, maturidades){
   # Calculating optimal decay parameters --------------------------------
   
   
-  optlamfun <- optim(lambda, rmse_sv, Y = yields, tau = maturidades , control = list(maxit = 10000, reltol = 0.00000001))
+  optlamfun <- stats::optim(lambda, rmse_sv, Y = yields, tau = maturidades , control = list(maxit = 10000, reltol = 0.00000001))
   
   lam1 <- optlamfun$par[1]
   lam2 <- optlamfun$par[2]
