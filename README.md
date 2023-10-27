@@ -1,2 +1,3 @@
 # ettj
 Yield curve estimation via the two step method of decay parameters optimization.
+Estimates yield curve factor models, Diebold and Li (2006), Svensson (1994) and extensions of them. The decay parameters are optimized using the two step approach. This method produces accurate representations of empirical zero-coupon yields while producing factors that can be interpreted as the level, inclination and curvature of term structure of the yield curve. This factors are time series vectors that can be further incorporated in other models. Therefore, this approach is able to reduce a multi dimention problem into a few factors.

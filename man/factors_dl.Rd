@@ -25,9 +25,10 @@ Then, performs an OLS regression using the 3 factor yield curve model in order t
 }
 \examples{
 
-library('Quandl')
+#library('Quandl')
 
-dados <- Quandl("USTREASURY/YIELD")
+#dados <- Quandl("USTREASURY/YIELD")
+dados <- ettj_package_data
 yields <- dados[1,2:ncol(dados)]
 maturidades <- c(1/12, 2/12, 3/12, 6/12, 1, 2, 3, 5, 7, 10, 20, 30);
 factors <- factors_dl(c(.9,.035), yields, maturidades)
