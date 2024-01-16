@@ -1,21 +1,22 @@
 Package: ettj
 Type: Package
-Title: Yield curve estimation via the two step method of decay parameters optimization.
+Title: Yield curve estimation via the two step method with decay parameters optimization
 Version: 1.0.0
 Author: Lucas Rubbo Tesser
 Maintainer: The package maintainer <lcstesser@gmail.com>
-Description: Estimates yield curve factor models, Diebold and Li (2006), Svensson (1994) and extensions of them. 
-             The decay parameters are optimized using the two step approach.
-             This method produces accurate representations of empirical zero-coupon yields while producing factors that can be interpreted as the level, inclination and curvature of term structure of the yield curve.
-             This factors are time series vectors that can be further incorporated in other models. 
-             Therefore, this approach is able to reduce a multi dimention problem into a few factors.
+Description: Estimates yield curve factor models, as described in Diebold and Li (2006), 
+    Svensson (1994) and extensions. It produces accurate representations of empirical 
+    zero-coupon yields while the factors can be interpreted as the level, slope and 
+    curvature of term structure of the yield curve. The main advantadge this approach 
+    is the ability to reduce a multi dimention problem into a few factors.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    dplyr,
-    purrr,
+    dplyr (>= 1.1.4),
+    purrr (>= 1.0.2),
     stats
 RoxygenNote: 7.2.3
 Depends: 
-    R (>= 2.10)
+    R (>= 4.1.0)
+
