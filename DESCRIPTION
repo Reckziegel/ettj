@@ -1,13 +1,14 @@
 Package: ettj
 Type: Package
-Title: Yield curve estimation via the two step method with decay parameters
+Title: Yield curve estimation via the two step method with decay parameters optimization
 Version: 1.0.0
 Author: Lucas Rubbo Tesser
 Maintainer: The package maintainer <lcstesser@gmail.com>
 Description: Estimates yield curve factor models, Diebold and Li (2006), Svensson (1994)
     and extensions. It produces accurate representations of empirical zero-coupon yields
-    while the factors that can be interpreted as the level, slope and curvature of term 
-    structure of the yield curve.
+    while the factors can be interpreted as the level, slope and curvature of term 
+    structure of the yield curve. The main advantadge this approach is the ability 
+    to reduce a multi dimention problem into a few factors.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
